@@ -7,7 +7,7 @@ export default class BioDescription extends Component
         return (
             <div className="BioDescription">
                 <div className="whitemodel">
-                    This is nikhil's website
+                    This is JD's website
                 </div>
             </div>
         )
