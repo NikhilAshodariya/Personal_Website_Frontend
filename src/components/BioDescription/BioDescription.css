@@ -1,0 +1,10 @@
+.BioDescription {
+    background-image: linear-gradient(to right, blue, red);
+}
+
+.whitemodel {
+    background-color: white;
+    margin-left: 2em;
+    margin-right: 2em;
+    /*margin: 2em*/
+}
