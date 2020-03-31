@@ -28,7 +28,7 @@ export default class BioDescription extends Component {
                                         <i className="fas fa-flag"/>
                                     </span>
                                     <span className="value iconText">
-                                        US citizen
+
                                     </span>
                                     <br/>
                                     <span className="icon">
