@@ -25,11 +25,15 @@ export default class BioDescription extends Component {
                                     <br/>
 
                                     <span className="icon">
-                                        <i className="fas fa-flag"/>
+                                        <i className="fas fa-link"/>
                                     </span>
                                     <span className="value iconText">
-
+                                        <a href="https://drive.google.com/file/d/1k4c-HvkgDjjV-j0HXNPaqNfpndNl658O/view?usp=sharing"
+                                           className="linkified" target="_blank">
+                                            Resume
+                                        </a>
                                     </span>
+
                                     <br/>
                                     <span className="icon">
                                         <i className="fas fa-envelope"></i>
@@ -48,7 +52,7 @@ export default class BioDescription extends Component {
                                         <i className="fas fa-home"/>
                                     </span>
                                     <span className="value iconText">
-                                        116 Lake St. Jersey City NJ, United States
+                                        Jersey City NJ, United States
                                     </span>
 
                                     <br/>
@@ -62,15 +66,7 @@ export default class BioDescription extends Component {
 
                                     <br/>
 
-                                    <span className="icon">
-                                        <i className="fas fa-link"/>
-                                    </span>
-                                    <span className="value iconText">
-                                        <a href="https://drive.google.com/file/d/1k4c-HvkgDjjV-j0HXNPaqNfpndNl658O/view?usp=sharing"
-                                           className="linkified" target="_blank">
-                                            Resume
-                                        </a>
-                                    </span>
+
                                 </span>
                             </div>
                         </div>

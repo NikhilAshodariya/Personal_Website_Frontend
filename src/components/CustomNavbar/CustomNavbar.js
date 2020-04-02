@@ -6,25 +6,33 @@ import "./CustomNavbar.css";
 export default class CustomNavbar extends Component {
     render() {
         return (
-            <div>
+            <div id={"customNavBar"}>
                 <div className={""}>
                     <>
                         <Nav className="justify-content-center bg-dark" activeKey="/home">
                             {/*ProfileWork experienceEducationCertifications and AwardsSkills*/}
-                            <Nav.Item>
-                                <Nav.Link href="/home"><span className={"text-white"}>Profile</span></Nav.Link>
+                            <Nav.Item onClick={()=>this.props.changeActiveTab("profile")}>
+                                <Nav.Link href={"#customNavBar"}><span className={"text-white"}>Profile</span></Nav.Link>
                             </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link eventKey="link-1"><span className="text-white">Work Experience</span></Nav.Link>
+                            <Nav.Item onClick={()=>this.props.changeActiveTab("workexp")}>
+                                <Nav.Link eventKey="link-1" href={"#customNavBar"}>
+                                    <span className="text-white">
+                                        Work Experience
+                                    </span>
+                                </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link eventKey="link-2"><span className="text-white">Education</span></Nav.Link>
+                            <Nav.Item onClick={()=>this.props.changeActiveTab("education")}>
+                                <Nav.Link eventKey="link-2" href={"#customNavBar"}>
+                                    <span className="text-white">
+                                        Education
+                                    </span>
+                                </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link eventKey="link-2"><span className="text-white">Skills</span></Nav.Link>
+                            <Nav.Item onClick={()=>this.props.changeActiveTab("skills")}>
+                                <Nav.Link eventKey="link-2" href={"#customNavBar"}><span className="text-white">Skills</span></Nav.Link>
                             </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link eventKey="link-2"><span className="text-white">Hobbies</span></Nav.Link>
+                            <Nav.Item onClick={()=>this.props.changeActiveTab("hobbies")}>
+                                <Nav.Link eventKey="link-2" href={"#customNavBar"}><span className="text-white">Hobbies</span></Nav.Link>
                             </Nav.Item>
                             {/*<Nav.Item>*/}
                             {/*    <Nav.Link eventKey="disabled" disabled>*/}

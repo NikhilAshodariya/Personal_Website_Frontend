@@ -1,0 +1,71 @@
+.icon {
+    margin-top: 1em;
+}
+
+/*hr.dashed {*/
+/*    border-left: 2px dashed #999;*/
+/*}*/
+
+.workexp {
+    /*bottom:15%;*/
+    /*position:absolute;*/
+    -webkit-animation:linear infinite alternate;
+    -webkit-animation-name: run;
+    -webkit-animation-duration: 50s;
+}
+@-webkit-keyframes run {
+    0% { left: 0;}
+    25%{ left : 50%;}
+    50%{ left: 100%}
+    100%{ left: 0;}
+}
+
+.workExpItem {
+    padding-bottom: 1em;
+}
+
+span.startandenddate {
+    margin-right: 1em;
+}
+
+span.dashed {
+    border-left: 2px dotted #999;
+    /*height: 12em;*/
+
+    display: table-cell;
+    width: 0;
+    height: 3em;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+hr.dotted {
+    border-top: 2px dotted #999;
+}
+
+hr.solid {
+    border-top: 2px solid #999;
+}
+
+hr.hr-text {
+    position: relative;
+    border: none;
+    height: 1px;
+    background: #999;
+}
+
+hr.hr-text::before {
+    content: attr(data-content);
+    display: inline-block;
+    background: #fff;
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: #999;
+    border-radius: 30rem;
+    padding: 0.2rem 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
