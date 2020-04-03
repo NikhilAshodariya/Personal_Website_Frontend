@@ -31,8 +31,8 @@ export default class CustomNavbar extends Component {
                             <Nav.Item onClick={()=>this.props.changeActiveTab("skills")}>
                                 <Nav.Link eventKey="link-2" href={"#customNavBar"}><span className="text-white">Skills</span></Nav.Link>
                             </Nav.Item>
-                            <Nav.Item onClick={()=>this.props.changeActiveTab("hobbies")}>
-                                <Nav.Link eventKey="link-2" href={"#customNavBar"}><span className="text-white">Hobbies</span></Nav.Link>
+                            <Nav.Item onClick={()=>this.props.changeActiveTab("projects")}>
+                                <Nav.Link eventKey="link-2" href={"#customNavBar"}><span className="text-white">Projects</span></Nav.Link>
                             </Nav.Item>
                             {/*<Nav.Item>*/}
                             {/*    <Nav.Link eventKey="disabled" disabled>*/}

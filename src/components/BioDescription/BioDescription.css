@@ -4,7 +4,9 @@
 }
 
 .belowNameIntro {
-    background-color: aqua;
+    border-radius: 3em;
+    padding: 1em;
+    background-color: aliceblue;
     margin-top: 1em;
 }
 

@@ -60,8 +60,18 @@ export default class Footer extends Component {
                             <div className="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
                                 <ul className="list-unstyled list-inline social text-center">
                                     <li className="list-inline-item">
+                                        <a href="https://github.com/NikhilAshodariya">
+                                            <i className="fab fa-github"/>
+                                        </a>
+                                    </li>
+                                    <li className="list-inline-item">
                                         <a href="https://www.linkedin.com/in/nikhilashodariya/">
                                             <i className="fab fa-linkedin-in"/>
+                                        </a>
+                                    </li>
+                                    <li className="list-inline-item">
+                                        <a href="https://www.youtube.com/channel/UCWSl7NshA4JSSAFtVl_FoWg">
+                                            <i className="fab fa-youtube"/>
                                         </a>
                                     </li>
                                     <li className="list-inline-item">

@@ -20,7 +20,19 @@
     100%{ left: 0;}
 }
 
-.workExpItem {
+span.active {
+    color: #252525;
+}
+
+span.inactive {
+    color: #ccc;
+}
+
+.skillitem {
+    font-size: 1.3em;
+}
+
+.workexpitem, .projectitem, .educationitem, .skillitem{
     padding-bottom: 1em;
 }
 

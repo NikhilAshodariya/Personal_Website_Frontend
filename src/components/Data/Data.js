@@ -1,4 +1,6 @@
-import React,{Component} from "react";
+import React, {Component} from "react";
+
+import "./Data.css";
 
 export default class Data extends Component {
 
@@ -76,8 +78,8 @@ export default class Data extends Component {
     workExRender = () => {
         const data = this.callWorkExAPI();
 
-        const work = data.map((value,idx) =>
-            <div id={"workex"+idx} className="row workExpItem">
+        const work = data.map((value, idx) =>
+            <div id={"workex" + idx} className="row workexpitem">
                 <div className="col-3">
                     <span className="float-right ">
                         <span>
@@ -96,10 +98,10 @@ export default class Data extends Component {
                                 </span>
                                 <br/>
                                 <span className="company">
-                                    {value['company']}
+                                    <i>{value['company']}</i>,
                                 </span>
                                 <span className="location">
-                                    &nbsp; {value['location']}
+                                    <i>&nbsp; {value['location']}</i>
                                 </span>
                                 <br/>
                                 <span className="jobdescription">
@@ -110,7 +112,6 @@ export default class Data extends Component {
                 </div>
 
             </div>
-
         );
 
         const finalRes = (
@@ -147,7 +148,7 @@ export default class Data extends Component {
                 "degree": "M.S. in Computer Science",
                 "gpa": "3.82/4",
                 "courses": ["Algorithms", "Web programming", "Web Mining", "Principles of Programming Languages"],
-                "location":"Hoboken, NJ, USA",
+                "location": "Hoboken, NJ, USA",
                 "description": ""
             },
             {
@@ -157,7 +158,7 @@ export default class Data extends Component {
                 "degree": "B.E. in Computer Engineering",
                 "gpa": "8.82/10",
                 "courses": ["Soft Computing", "Machine Learning", "Database Management Systems", "Data Structures"],
-                "location":"Mumbai, India",
+                "location": "Mumbai, India",
                 "description": ""
             }
         ];
@@ -168,8 +169,8 @@ export default class Data extends Component {
     educationRender = () => {
         const data = this.callEducationAPI();
 
-        const education = data.map((value,idx) =>
-            <div id={"education"+idx} className="row eductionItem">
+        const education = data.map((value, idx) =>
+            <div id={"education" + idx} className="row eductionitem">
                 <div className="col-3">
                     <span className="float-right ">
                         <span>
@@ -183,18 +184,18 @@ export default class Data extends Component {
                 <div className="col-9">
                         <span>
                             <span>
-                                <span className="jobtitle">
+                                <span className="educationtitle">
                                     <b>{value['university']}</b>
                                 </span>
                                 <br/>
-                                <span className="company">
+                                <span className="college">
                                     <i>{value['degree']}</i>,
                                 </span>
-                                <span className="location">
+                                <span className="gpa">
                                     &nbsp; <i>GPA: {value['gpa']}</i>
                                 </span>
                                 <br/>
-                                <span className="jobdescription">
+                                <span className="educationdescription">
                                     {value['description']}
                                 </span>
                             </span>
@@ -202,7 +203,6 @@ export default class Data extends Component {
                 </div>
 
             </div>
-
         );
 
         const finalRes = (
@@ -223,6 +223,266 @@ export default class Data extends Component {
                 </h3>
                 <div>
                     {education}
+                </div>
+            </div>
+        );
+
+        return finalRes;
+    };
+
+    callProjectsAPI = () => {
+        const defaultProject = [
+            {
+                "name": "Restaurants suggestion",
+                "title": "Course project for Data Mining",
+                "place": "Hoboken, NJ",
+                "startdate": "02/2019",
+                "enddate": "05/2019",
+                "description": "Developed a web application for providing restaurant suggestion based on user’s choice of preference for\n" +
+                    "ambience, food, service. Developed an algorithm to classify the reviews based on aspect I.e. classification based on aspect"
+            },
+            {
+                'name': 'JSNumpy',
+                'title': 'Contribution to open source project',
+                'place': 'Mumbai, India',
+                'startdate': '12/2017',
+                'enddate': '12/2017',
+                'description': 'Developed a JavaScript based library similar to Numpy in Python which is used to perform complex matrix\n' +
+                    'operations in JavaScript. Published this library on Node Package Manager (NPM) (https://www.npm.js.com/package/jsnumpy)'
+            },
+            {
+                'name': 'Providing Dietary Recommendation using Artificial Intelligence',
+                'title': 'Final year undergraduate project',
+                'place': 'Mumbai, India',
+                'startdate': '09/2017',
+                'enddate': '09/2017',
+                'description': 'Collected data using web scraping using publically available APIs for nutrient content of various food items.\n' +
+                    'Created a chromosome which is the basic unit for genetic algorithm depending upon the person’s intake.\n' +
+                    'Used technologies like MongoDB, Express, Node.js and JavaScript.'
+            }
+        ];
+        return defaultProject;
+    };
+
+    projectRender = () => {
+        const data = this.callProjectsAPI();
+
+        const projects = data.map((value, idx) =>
+            <div id={"project" + idx} className="row projectitem">
+                <div className="col-3">
+                    <span className="float-right ">
+                        <span>
+                            <span className="startandenddate">
+                                {value['startdate']} - {value['enddate']}
+                            </span>
+                            <span className="dashed"/>
+                        </span>
+                    </span>
+                </div>
+                <div className="col-8">
+                        <span>
+                            <span>
+                                <span className="projectname">
+                                    <b>{value['name']}</b>
+                                </span>
+                                <br/>
+                                <span className="projecttitle">
+                                    <i>{value['title']}</i>,
+                                </span>
+                                <span className="projectlocation">
+                                    &nbsp; <i>{value['place']}</i>
+                                </span>
+                                <br/>
+                                <span className="projectdescription">
+                                    {value['description']}
+                                </span>
+                            </span>
+                        </span>
+                </div>
+
+            </div>
+        );
+
+        const finalRes = (
+            <div>
+                <h1 className="row justify-content-center">
+                            <span className="icon">
+                                <span>
+                                    <i className="fab fa-github"></i>
+                                </span>
+                            </span>
+                </h1>
+                <h3 className="row justify-content-center">
+                    <span>
+                        Projects
+                    </span>
+                    <br/>
+                    <br/>
+                </h3>
+                <div>
+                    {projects}
+                </div>
+                <br/>
+
+                <div className="row justify-content-center">
+                    <span className="btn btn-primary">
+                        <a href="https://github.com/NikhilAshodariya?tab=repositories" className="text-white">
+                            More Projects...
+                        </a>
+                    </span>
+                </div>
+            </div>
+        );
+
+        return finalRes;
+    };
+
+    callSkillsAPI = () => {
+        const defaultSkills = [
+            {
+                'category': 'programming skills',
+                'name': 'Python',
+                'totaldash': '35',
+                'activedash': '35'
+            },
+            {
+                'category': 'programming skills',
+                'name': 'JavaScript',
+                'totaldash': '35',
+                'activedash': '35'
+            },
+            {
+                'category': 'programming skills',
+                'name': 'Java',
+                'totaldash': '35',
+                'activedash': '30'
+            },
+            {
+                'category': 'programming skills',
+                'name': 'Scala',
+                'totaldash': '35',
+                'activedash': '20'
+            },
+            {
+                'category': 'frameworks',
+                'name': 'Node.js',
+                'totaldash': '35',
+                'activedash': '33'
+            },
+            {
+                'category': 'frameworks',
+                'name': 'Bootstrap',
+                'totaldash': '35',
+                'activedash': '25'
+            },
+            {
+                'category': 'frameworks',
+                'name': 'React',
+                'totaldash': '35',
+                'activedash': '25'
+            },
+            {
+                'category': 'database',
+                'name': 'MongoDB',
+                'totaldash': '35',
+                'activedash': '25'
+            },
+            {
+                'category': 'database',
+                'name': 'MySQL',
+                'totaldash': '35',
+                'activedash': '25'
+            },
+            {
+                'category': 'database',
+                'name': 'PostgreSQL',
+                'totaldash': '35',
+                'activedash': '28'
+            },
+            {
+                'category': 'version control',
+                'name': 'GitHub',
+                'totaldash': '35',
+                'activedash': '27'
+            }
+
+        ];
+        return defaultSkills;
+    };
+
+    skillsRender = () => {
+        const data = this.callSkillsAPI();
+        const activedash = [];
+        const deactivedash = [];
+
+        for (let i = 0; i < data.length; i++) {
+            const activeTemp = [];
+            const deactiveTemp = [];
+
+            for (let j = 0; j < parseInt(data[i]['activedash']); j++) {
+                activeTemp.push(<span className="active">|</span>)
+            }
+
+            for (let j = 0; j < parseInt(data[i]['totaldash']) - parseInt(data[i]['activedash']); j++) {
+                deactiveTemp.push(<span className="inactive">|</span>)
+            }
+
+            activedash.push(activeTemp);
+            deactivedash.push(deactiveTemp);
+        }
+
+        const skills = data.map((value, idx) =>
+            <div>
+                <div id={"skill" + idx} className="row skillitem">
+                    <span className="col-2"/>
+                    <span className="skill-name col-4">
+                        {value['name']}
+                    </span>
+                    <span className="skill-description col-4">
+                        <div className="skill-progress">
+                            {
+                                activedash[idx]
+                            }
+                            {
+                                deactivedash[idx]
+                            }
+                        </div>
+
+                    </span>
+
+                </div>
+                {
+                    idx !== data.length - 1 ? (
+                        data[idx + 1]['category'] !== data[idx]['category'] ? (
+                            <div className="row">
+                                {idx}
+                                <hr/>
+                            </div>
+                        ) : (<div/>)
+                    ) : (<div/>)
+                }
+            </div>
+
+        );
+
+        const finalRes = (
+            <div>
+                <h1 className="row justify-content-center">
+                            <span className="icon">
+                                <span>
+                                    <i className="fas fa-flask"></i>
+                                </span>
+                            </span>
+                </h1>
+                <h3 className="row justify-content-center">
+                    <span>
+                        Skills
+                    </span>
+                    <br/>
+                    <br/>
+                </h3>
+                <div>
+                    {skills}
                 </div>
             </div>
         );
@@ -254,10 +514,18 @@ export default class Data extends Component {
                 );
 
             case 'skills':
-                break;
+                return (
+                    <div className="skills">
+                        {this.skillsRender()}
+                    </div>
+                );
 
-            case 'hobbies':
-                break;
+            case 'projects':
+                return (
+                    <div className="projects">
+                        {this.projectRender()}
+                    </div>
+                );
 
             default:
                 return (
