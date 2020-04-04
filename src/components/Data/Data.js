@@ -51,8 +51,8 @@ export default class Data extends Component {
     callWorkExAPI = () => {
         const defaultExp = [
             {
-                "startdate": "06/01/2017",
-                "enddate": "07/02/2018",
+                "startdate": "06/2017",
+                "enddate": "07/2018",
                 "position": "Software Developer",
                 "company": "Feat Systems Pvt Ltd.",
                 "type": "Full-time",
@@ -60,8 +60,8 @@ export default class Data extends Component {
                 "jobdescription": "I have worked on various RPA tools like UiPath and WorkFusion. I had also worked on two client project which helped them to reduce their repetitive work drastically along with that I worked on Chat Bot made in Python and have used Flask(Python 3) and MongoDB."
             },
             {
-                "startdate": "05/27/2019",
-                "enddate": "08/09/2019",
+                "startdate": "05/2019",
+                "enddate": "08/2019",
                 "position": "Software Developer Engineers Intern",
                 "company": "Amazon",
                 "type": "Intern",
@@ -80,8 +80,9 @@ export default class Data extends Component {
 
         const work = data.map((value, idx) =>
             <div id={"workex" + idx} className="row workexpitem">
-                <div className="col-3">
-                    <span className="float-right ">
+                <div className="col-1"/>
+                <div className="col-2">
+                    <span>
                         <span>
                             <span className="startandenddate">
                                 {value['startdate']} - {value['enddate']}
@@ -171,8 +172,10 @@ export default class Data extends Component {
 
         const education = data.map((value, idx) =>
             <div id={"education" + idx} className="row eductionitem">
+                <div className="col-1"/>
+
                 <div className="col-3">
-                    <span className="float-right ">
+                    <span className="">
                         <span>
                             <span className="startandenddate">
                                 {value['startdate']} - {value['enddate']}
@@ -181,7 +184,7 @@ export default class Data extends Component {
                         </span>
                     </span>
                 </div>
-                <div className="col-9">
+                <div className="col-8">
                         <span>
                             <span>
                                 <span className="educationtitle">
@@ -269,8 +272,10 @@ export default class Data extends Component {
 
         const projects = data.map((value, idx) =>
             <div id={"project" + idx} className="row projectitem">
-                <div className="col-3">
-                    <span className="float-right ">
+                <div className="col-1"/>
+
+                <div className="col-2 startDateEndDate">
+                    <span>
                         <span>
                             <span className="startandenddate">
                                 {value['startdate']} - {value['enddate']}
@@ -434,8 +439,8 @@ export default class Data extends Component {
         const skills = data.map((value, idx) =>
             <div>
                 <div id={"skill" + idx} className="row skillitem">
-                    <span className="col-2"/>
-                    <span className="skill-name col-4">
+                    <span className="col-1"/>
+                    <span className="skill-name col-3">
                         {value['name']}
                     </span>
                     <span className="skill-description col-4">
@@ -455,7 +460,6 @@ export default class Data extends Component {
                     idx !== data.length - 1 ? (
                         data[idx + 1]['category'] !== data[idx]['category'] ? (
                             <div className="row">
-                                {idx}
                                 <hr/>
                             </div>
                         ) : (<div/>)

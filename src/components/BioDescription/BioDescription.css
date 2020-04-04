@@ -16,7 +16,7 @@
     background-size: 84.45em 75em;
 
     background-repeat: no-repeat;
-    width: 84.45em;
+    width: 100%;
     height: 41em;
 }
 
@@ -25,11 +25,11 @@
 }
 
 #bioImage {
-    border-radius: 7em;
+    border-radius: 50%;
+    height: 50%;
     /*height: 15em;*/
     /*width: 15em;*/
     margin-top: 2em;
-    margin-left: 2em;
 }
 
 #name{
@@ -38,6 +38,7 @@
     /*margin-top: 5em;*/
     font-family: 'Playball', Georgia, cursive;
     text-transform: capitalize;
+    display: inherit;
 }
 
 .whitemodel {
@@ -45,4 +46,21 @@
     margin-left: 2em;
     margin-right: 2em;
     /*margin: 2em*/
+}
+
+
+@media (min-width: 768px) {
+    .belowNameIntro{
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .belowNameIntro{
+        width: 80%;
+    }
+
+    #name {
+        font-size: 45px;
+    }
 }
