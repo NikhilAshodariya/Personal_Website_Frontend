@@ -174,7 +174,7 @@ export default class Data extends Component {
             <div id={"education" + idx} className="row eductionitem">
                 <div className="col-1"/>
 
-                <div className="col-3">
+                <div className="col-2">
                     <span className="">
                         <span>
                             <span className="startandenddate">

@@ -6,20 +6,21 @@ export default class BioDescription extends Component {
     render() {
         return (
             <div className="BioDescription">
-                <div className="row justify-content-center">
-                    <img className="col-8 col-sm-6 col-md-4 col-lg-2 col-xl-2"
-                         src={"/img/self_1.jpg"}
-                         id={"bioImage"}
-                         alt="Nikhil Ashodariya"/>
+                <div>
+                    <div className="row justify-content-center">
+                        <img className="col-8 col-sm-6 col-md-4 col-lg-2 col-xl-2"
+                             src={"/img/self_1.jpg"}
+                             id={"bioImage"}
+                             alt="Nikhil Ashodariya"/>
 
-                </div>
-                <div className="row justify-content-center">
-                    <div className={"belowNameIntro"}>
-                        <h1 className="row text-center" id={"name"}>
-                            Nikhil Ashodariya
-                        </h1>
-                        <div className="row">
-                            <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 float-left hidden-xs">
+                    </div>
+                    <div className="row justify-content-center">
+                        <div className={"belowNameIntro"}>
+                            <h1 className="row text-center" id={"name"}>
+                                Nikhil Ashodariya
+                            </h1>
+                            <div className="row">
+                                <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 float-left hidden-xs">
                                 <span>
                                     <span className="">
                                         <span className="icon">
@@ -43,9 +44,9 @@ export default class BioDescription extends Component {
                                     <br/>
 
                                 </span>
-                            </div>
+                                </div>
 
-                            <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                                <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                                 <span className="">
                                     <span>
                                         <span className="icon">
@@ -83,9 +84,18 @@ export default class BioDescription extends Component {
                                         </span>
                                     </span>
                                 </span>
-                            </div>
+                                </div>
 
+                            </div>
                         </div>
+                    </div>
+
+                    <div className="row scroll-down">
+                    <span className="col-12 text-white text-center">
+                        <a href="#customNavBar">
+                            <i className="text-white fas fa-arrow-down"/>
+                        </a>
+                    </span>
                     </div>
                 </div>
             </div>
