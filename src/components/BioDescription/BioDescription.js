@@ -64,6 +64,9 @@ export default class BioDescription extends Component {
                                                className="linkified" target="_blank">
                                                 Resume
                                             </a>
+                                            <span className="icon">
+                                                <i className="fas fa-external-link-alt"/>
+                                            </span>
                                         </span>
 
                                     </span>

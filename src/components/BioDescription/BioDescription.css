@@ -48,6 +48,12 @@
     /*margin: 2em*/
 }
 
+i[class="fas fa-external-link-alt"]{
+    font-size: 0.8em;
+    display: table-caption;
+    padding-left: 5px;
+}
+
 
 @media (min-width: 768px) {
     .belowNameIntro{
