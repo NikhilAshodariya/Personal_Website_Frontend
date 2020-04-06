@@ -17,7 +17,7 @@ a {
 .BioDescription {
     /*background-image: linear-gradient(to right, blue, red);*/
     background-image: url("/img/bg.jpg");
-    background-size: 84.45em 75em;
+    background-size: 100% 75em;
 
     background-repeat: no-repeat;
     width: 100%;
