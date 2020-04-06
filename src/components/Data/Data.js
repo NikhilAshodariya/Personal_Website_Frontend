@@ -6,7 +6,7 @@ export default class Data extends Component {
 
     callProfileAPI = () => {
         const defaultProfile = {
-            'profile': "I am a human looking for a software developer role in this life. I am interested to work on" +
+            'profile': "I am a software developer looking for full-time role. I am interested to work on" +
                 " technologies like Python, Node.js, and Java. I am a Full-Stack developer. Apart from my professional" +
                 " life I love to travel."
         };
