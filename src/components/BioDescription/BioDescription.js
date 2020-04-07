@@ -1,33 +1,40 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import "./BioDescription.css"
+import {useQuery} from "@apollo/react-hooks";
+import queries from "../Data/queries";
 
-export default class BioDescription extends Component {
-    render() {
-        return (
-            <div className="BioDescription">
-                <div>
-                    <div className="row justify-content-center">
-                        <img className="col-8 col-sm-6 col-md-4 col-lg-2 col-xl-2"
-                             src={"/img/self_1.jpg"}
-                             id={"bioImage"}
-                             alt="Nikhil Ashodariya"/>
 
-                    </div>
-                    <div className="row justify-content-center">
-                        <div className={"belowNameIntro"}>
-                            <h1 className="row text-center" id={"name"}>
-                                Nikhil Ashodariya
-                            </h1>
-                            <div className="row">
-                                <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 float-left hidden-xs">
+export default function BioDescription(props) {
+    const stay = useQuery(queries.GET_stay)["data"];
+    const resumeLink = useQuery(queries.GET_resumeLink)["data"];
+    const phone = useQuery(queries.GET_phone)["data"];
+    const email = useQuery(queries.GET_email)["data"];
+
+    return (
+        <div className="BioDescription">
+            <div>
+                <div className="row justify-content-center">
+                    <img className="col-8 col-sm-6 col-md-4 col-lg-2 col-xl-2"
+                         src={"/img/self_1.jpg"}
+                         id={"bioImage"}
+                         alt="Nikhil Ashodariya"/>
+
+                </div>
+                <div className="row justify-content-center">
+                    <div className={"belowNameIntro"}>
+                        <h1 className="row text-center" id={"name"}>
+                            Nikhil Ashodariya
+                        </h1>
+                        <div className="row">
+                            <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 float-left hidden-xs">
                                 <span>
                                     <span className="">
                                         <span className="icon">
                                             <i className="fas fa-home"/>
                                         </span>
                                         <span className="value iconText">
-                                            Greater New York city area
+                                            {stay?stay["stay"]:""}
                                         </span>
                                     </span>
 
@@ -38,15 +45,15 @@ export default class BioDescription extends Component {
                                             <i className="fas fa-phone"/>
                                         </span>
                                         <span className="value iconText">
-                                            +1 856-263-1890
+                                            {phone?phone["phone"]:""}
                                         </span>
                                     </span>
                                     <br/>
 
                                 </span>
-                                </div>
+                            </div>
 
-                                <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                            <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                                 <span className="">
                                     <span>
                                         <span className="icon">
@@ -61,7 +68,8 @@ export default class BioDescription extends Component {
                                             <i className="fas fa-link"/>
                                         </span>
                                         <span className="value iconText">
-                                            <a href="https://drive.google.com/file/d/1k4c-HvkgDjjV-j0HXNPaqNfpndNl658O/view?usp=sharing"
+                                            {/*https://drive.google.com/file/d/1k4c-HvkgDjjV-j0HXNPaqNfpndNl658O/view?usp=sharing*/}
+                                            <a href={resumeLink?resumeLink["resumeLink"]:""}
                                                className="linkified" target="_blank">
                                                 Resume
                                             </a>
@@ -79,26 +87,25 @@ export default class BioDescription extends Component {
                                         </span>
                                         <span className="value iconText">
                                             <a href="mailto:hello@kickresume.com" className="linkified" target="_blank">
-                                                nashodar@stevens.edu
+                                                {email?email["email"]:""}
                                             </a>
                                         </span>
                                     </span>
                                 </span>
-                                </div>
-
                             </div>
+
                         </div>
                     </div>
+                </div>
 
-                    <div className="row scroll-down">
+                <div className="row scroll-down">
                     <span className="col-12 text-white text-center">
                         <a href="#customNavBar">
                             <i className="text-white fas fa-arrow-down"/>
                         </a>
                     </span>
-                    </div>
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
 }
