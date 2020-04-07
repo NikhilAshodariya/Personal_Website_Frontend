@@ -332,7 +332,7 @@ export default function Data(props) {
             if (profile!== undefined){
                 return (
                     <div className="profile">
-                        {profileRender(profile)}
+                        {profileRender(profile["profile"])}
                     </div>
                 );
             } else {
@@ -377,7 +377,7 @@ export default function Data(props) {
             if (skills !== undefined) {
                 return (
                     <div className="skills">
-                        {skillsRender(skills)}
+                        {skillsRender(skills["skills"])}
                     </div>
                 );
             } else {
@@ -392,7 +392,7 @@ export default function Data(props) {
             if(projects!== undefined) {
                 return (
                     <div className="projects">
-                        {projectRender(projects)}
+                        {projectRender(projects["projects"])}
                     </div>
                 );
             }else {
