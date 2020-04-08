@@ -20,7 +20,7 @@ const GET_stay = gql`
 
 const GET_resumeLink = gql`
     query {
-        email
+        resumeLink
     }
 `;
 
